@@ -1,13 +1,87 @@
-" enable pathogen plugin 
+" enable pathogen plugin
 execute pathogen#infect()
 
 if (has("gui_running"))
         set guifont=Source\ Code\ Pro:h11
         " 平滑字体
-        set antialias 
+        set antialias
         " 不显示滚动条
         set guioptions-=r
 endif
+
+" nerdcommenter configuration
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" alternative delimiter
+let g:NERDAltDelims_c = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Add your own custom formats or override the defaults
+"let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+
+" ctrlp
+let g:ctrlp_map = '<leader>p'
+let g:ctrlp_cmd = 'CtrlP'
+map <leader>f :CtrlPMRU<CR>
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
+    \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
+    \ }
+let g:ctrlp_working_path_mode=0
+let g:ctrlp_match_window_bottom=1
+let g:ctrlp_max_height=15
+let g:ctrlp_match_window_reversed=0
+let g:ctrlp_mruf_max=500
+let g:ctrlp_follow_symlinks=1
+
+" remap colon to space
+" nmap <space> <Leader>
+" vmap <space> <Leader>
+
+" remap leader from \ to ;
+"let mapleader=";"
+
+" select a jump in the jump list
+function! GotoJump()
+  jumps
+  let j = input("Please select your jump: ")
+  if j != ''
+    let pattern = '\v\c^\+'
+    if j =~ pattern
+      let j = substitute(j, pattern, '', 'g')
+      execute "normal " . j . "\<c-i>"
+    else
+      execute "normal " . j . "\<c-o>"
+    endif
+  endif
+endfunction
+" use :call GotoJump() or simply use <Leader>j
+" type 4 for the 4th jump, type +4 to forward to the 4th jump
+nmap <Leader>j :call GotoJump()<CR>
+
+" use Ctrl+L to clear search highlight
+if maparg('<C-L>', 'n') ==# '' | nnoremap <silent> <C-L> :nohlsearch<CR><C-L> | endif
+
+" dictionary using ici
+" python package ici and ydcv should be installed first
+nmap <Leader>y :!echo --==Lookup <C-R><C-w> from iciba and YouDao...==-- ; ydcv <C-R><C-W>; ici <C-R><C-W><CR>
+
+" taglist
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
 
 " 设置帮助文档为中文，需要 vimcdoc 子模块的支持
 set helplang=cn
@@ -15,12 +89,12 @@ set helplang=cn
 " for powerline status bar
 set rtp+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
 " 启动显示状态行(1)，总是显示状态行(2)
-set laststatus=2 
+set laststatus=2
 set t_Co=256
 
 " taglist
-let Tlist_Show_One_File=1  
-let Tlist_Exit_OnlyWindow=1 
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
 
 " 选中状态下 Ctrl+c 复制
 vmap <C-c> "+y
@@ -38,10 +112,11 @@ set iskeyword+=_,$,@,%,#,-
 set wildmenu
 set wildmode=longest:full,full
 
-" 语法高亮
 filetype plugin on
 " 为特定文件类型载入相关缩进文件
 filetype indent on
+
+" 语法高亮
 syntax on
 
 " 高亮显示普通txt文件（需要txt.vim脚本）
@@ -180,4 +255,34 @@ func SetTitle()
 	"新建文件后，自动定位到文件末尾
 	autocmd BufNewFile * normal G
 endfunc
+
+" NerdTree
+" 打开/关闭 NERDTree 快捷键
+map <leader>t :NERDTreeToggle<CR>
+" 显示行号
+let NERDTreeShowLineNumbers=1
+let NERDTreeAutoCenter=1
+" 是否显示隐藏文件
+let NERDTreeShowHidden=1
+" 设置宽度
+let NERDTreeWinSize=31
+" 在终端启动 vim 时，共享 NERDTree
+let g:nerdtree_tabs_open_on_console_startup=1
+" 忽略以下文件的显示
+let NERDTreeIgnore=['\.pyc','\~$','\.swp', '\.DS_Store']
+" 显示书签列表
+let NERDTreeShowBookmarks=1
+
+" 显示 git 信息
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
 
