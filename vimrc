@@ -124,6 +124,10 @@ syntax on
 
 "set backspace=2
 
+" iTerm2 上会有使用 delete 键无法删除的情况，加上这个就没问题了
+" 这个问题只在 iTerm2 上会出现，使用 vimR 就没有问题。
+set backspace=indent,eol,start
+
 " 设置光标随鼠标移动
 set mouse=a
 " 选择时不包含当前光标所在字符
