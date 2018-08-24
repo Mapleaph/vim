@@ -2,11 +2,25 @@
 execute pathogen#infect()
 
 if (has("gui_running"))
-        set guifont=Source\ Code\ Pro:h11
+        "set guifont=Source\ Code\ Pro:h11
+        set guifont=Monaco:h13
         " 平滑字体
         set antialias
+        " 设置配色方案
+        "colorscheme dracula
+        "colorscheme afterglow
+        "colorscheme Tomorrow
+        colorscheme Tomorrow-Night
         " 不显示滚动条
         set guioptions-=r
+else
+        " 平滑字体
+        set antialias
+        " 设置配色方案
+        "colorscheme dracula
+        "colorscheme afterglow
+        "colorscheme Tomorrow
+        colorscheme Tomorrow-Night
 endif
 
 " nerdcommenter configuration
@@ -134,13 +148,6 @@ set mouse=a
 set selection=exclusive
 "set selectmode=mouse,key
 
-" 设置配色方案
-"colorscheme torte
-"colorscheme murphy
-"colorscheme desert
-"colorscheme elflord
-"colorscheme ron
-colorscheme dracula
 
 " disable annoying error message when using YCM
 " Value Error: Still no compile flags, no completion yet.
