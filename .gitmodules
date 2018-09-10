@@ -31,3 +31,6 @@
 [submodule "bundle/vim-afterglow"]
 	path = bundle/vim-afterglow
 	url = https://github.com/danilo-augusto/vim-afterglow
+[submodule "bundle/vimux"]
+	path = bundle/vimux
+	url = https://github.com/benmills/vimux
