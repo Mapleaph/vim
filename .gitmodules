@@ -34,3 +34,24 @@
 [submodule "bundle/vimux"]
 	path = bundle/vimux
 	url = https://github.com/benmills/vimux
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-syntastic"]
+	path = bundle/vim-syntastic
+	url = https://github.com/vim-syntastic/syntastic
+[submodule "bundle/YankRing"]
+	path = bundle/YankRing
+	url = https://github.com/vim-scripts/YankRing.vim
+[submodule "bundle/vim-numbertoggle"]
+	path = bundle/vim-numbertoggle
+	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle
+[submodule "/Users/wukai/.vim/vim-pathogen"]
+	path = /Users/wukai/.vim/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule "/Users/wukai/.vim/bundle/vim-rhubarb"]
+	path = /Users/wukai/.vim/bundle/vim-rhubarb
+	url = https://github.com/tpope/vim-rhubarb
+[submodule "/Users/wukai/.vim/bundle/fugitive-gitlab"]
+	path = /Users/wukai/.vim/bundle/fugitive-gitlab
+	url = https://github.com/shumphrey/fugitive-gitlab.vim
