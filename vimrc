@@ -119,6 +119,9 @@ set nocompatible
 " 设置命令行行高，默认是 1
 set cmdheight=2
 
+" 显示当前指令
+set showcmd
+
 " 带有如下符号的单词不要被换行分割
 set iskeyword+=_,$,@,%,#,-
 
@@ -190,6 +193,12 @@ set incsearch
 
 set whichwrap+=<,>,[,]
 
+" 自动折行
+set wrap
+
+" 垂直滚动时，光标距离顶部/底部的位置（单位：行）
+set scrolloff=5
+
 " 设置当文件被改动时自动载入
 set autoread
 
@@ -199,8 +208,9 @@ set confirm
 "set copyindent
 set autoindent
 set cindent
-set tabstop=8
-set shiftwidth=8
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
 " 用空格代替制表符
 set expandtab
 " 在行和段的开始处使用制表符
@@ -211,6 +221,10 @@ set smartindent
 " 在被分割的窗口间添加空白，便于阅读
 set fillchars=vert:\ ,stl:\ ,stlnc:\
 
+" 如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
+set listchars=tab:»■,trail:■
+set list
+
 " 1 line yanked, 2 lines deleted message displayed
 set report=0
 
@@ -219,6 +233,13 @@ set number
 
 " 从不备份
 set nobackup
+
+" 保留撤销历史
+set undofile
+
+" 自动切换工作目录
+set autochdir
+
 " 突出显示当前行
 set cursorline
 
@@ -307,3 +328,11 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+command! Hex %!xxd
+command! Hexq %!xxd -r
