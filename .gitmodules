@@ -1,7 +1,3 @@
-[submodule "bundle/vim-markdown-preview"]
-	path = bundle/vim-markdown-preview
-	url = https://github.com/JamshedVesuna/vim-markdown-preview
-        ignore = dirty
 [submodule "bundle/dracula-theme"]
 	path = bundle/dracula-theme
 	url = https://github.com/dracula/vim.git
@@ -82,3 +78,6 @@
 	path = vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
         ignore = dirty
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/gabrielelana/vim-markdown.git
