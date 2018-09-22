@@ -1,83 +1,112 @@
 [submodule "bundle/dracula-theme"]
-	path = bundle/dracula-theme
-	url = https://github.com/dracula/vim.git
-        ignore = dirty
+    path = bundle/dracula-theme
+    url = https://github.com/dracula/vim.git
+    ignore = dirty
 [submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-        ignore = dirty
+    path = bundle/vim-surround
+    url = https://github.com/tpope/vim-surround.git
+    ignore = dirty
 [submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-        ignore = dirty
+    path = bundle/nerdtree
+    url = https://github.com/scrooloose/nerdtree.git
+    ignore = dirty
 [submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = https://github.com/vim-scripts/taglist.vim
-        ignore = dirty
+    path = bundle/taglist
+    url = https://github.com/vim-scripts/taglist.vim
+    ignore = dirty
 [submodule "bundle/vimcdoc"]
-	path = bundle/vimcdoc
-	url = git://github.com/yianwillis/vimcdoc.git
-        ignore = dirty
+    path = bundle/vimcdoc
+    url = git://github.com/yianwillis/vimcdoc.git
+    ignore = dirty
 [submodule "bundle/nerdtree-git-plugin"]
-	path = bundle/nerdtree-git-plugin
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
-        ignore = dirty
+    path = bundle/nerdtree-git-plugin
+    url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+    ignore = dirty
 [submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = https://github.com/ctrlpvim/ctrlp.vim
-        ignore = dirty
+    path = bundle/ctrlp
+    url = https://github.com/ctrlpvim/ctrlp.vim
+    ignore = dirty
 [submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
-        ignore = dirty
+    path = bundle/nerdcommenter
+    url = https://github.com/scrooloose/nerdcommenter.git
+    ignore = dirty
 [submodule "bundle/cscope_maps"]
-	path = bundle/cscope_maps
-	url = https://github.com/chazy/cscope_maps.git
-        ignore = dirty
+    path = bundle/cscope_maps
+    url = https://github.com/chazy/cscope_maps.git
+    ignore = dirty
 [submodule "bundle/vim-afterglow"]
-	path = bundle/vim-afterglow
-	url = https://github.com/danilo-augusto/vim-afterglow
-        ignore = dirty
+    path = bundle/vim-afterglow
+    url = https://github.com/danilo-augusto/vim-afterglow
+    ignore = dirty
 [submodule "bundle/vimux"]
-	path = bundle/vimux
-	url = https://github.com/benmills/vimux
-        ignore = dirty
+    path = bundle/vimux
+    url = https://github.com/benmills/vimux
+    ignore = dirty
 [submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-        ignore = dirty
+    path = bundle/vim-fugitive
+    url = https://github.com/tpope/vim-fugitive.git
+    ignore = dirty
 [submodule "bundle/vim-syntastic"]
-	path = bundle/vim-syntastic
-	url = https://github.com/vim-syntastic/syntastic
-        ignore = dirty
+    path = bundle/vim-syntastic
+    url = https://github.com/vim-syntastic/syntastic
+    ignore = dirty
 [submodule "bundle/YankRing"]
-	path = bundle/YankRing
-	url = https://github.com/vim-scripts/YankRing.vim
-        ignore = dirty
+    path = bundle/YankRing
+    url = https://github.com/vim-scripts/YankRing.vim
+    ignore = dirty
 [submodule "bundle/vim-numbertoggle"]
-	path = bundle/vim-numbertoggle
-	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle
-        ignore = dirty
+    path = bundle/vim-numbertoggle
+    url = https://github.com/jeffkreeftmeijer/vim-numbertoggle
+    ignore = dirty
 [submodule "/Users/wukai/.vim/bundle/vim-rhubarb"]
-	path = bundle/vim-rhubarb
-	url = https://github.com/tpope/vim-rhubarb
-        ignore = dirty
+    path = bundle/vim-rhubarb
+    url = https://github.com/tpope/vim-rhubarb
+    ignore = dirty
 [submodule "/Users/wukai/.vim/bundle/fugitive-gitlab"]
-	path = bundle/fugitive-gitlab
-	url = https://github.com/shumphrey/fugitive-gitlab.vim
-        ignore = dirty
+    path = bundle/fugitive-gitlab
+    url = https://github.com/shumphrey/fugitive-gitlab.vim
+    ignore = dirty
 [submodule "bundle/vim-airline"]
-	path = bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline
-        ignore = dirty
+    path = bundle/vim-airline
+    url = https://github.com/vim-airline/vim-airline
+    ignore = dirty
 [submodule "/Users/wukai/.vim/bundle/vim-airline-themes"]
-	path = bundle/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes
-        ignore = dirty
+    path = bundle/vim-airline-themes
+    url = https://github.com/vim-airline/vim-airline-themes
+    ignore = dirty
 [submodule "vim-pathogen"]
-	path = vim-pathogen
-	url = https://github.com/tpope/vim-pathogen
-        ignore = dirty
+    path = vim-pathogen
+    url = https://github.com/tpope/vim-pathogen
+    ignore = dirty
 [submodule "bundle/vim-markdown"]
-	path = bundle/vim-markdown
-	url = https://github.com/gabrielelana/vim-markdown.git
+    path = bundle/vim-markdown
+    url = https://github.com/gabrielelana/vim-markdown.git
+    ignore = dirty
+[submodule "bundle/vim-cheat40"]
+    path = bundle/vim-cheat40
+    url = https://github.com/lifepillar/vim-cheat40
+    ignore = dirty
+[submodule "bundle/commentary"]
+    path = bundle/commentary
+    url = https://tpope.io/vim/commentary.git
+    ignore = dirty
+[submodule "bundle/vim-javascript"]
+    path = bundle/vim-javascript
+    url = https://github.com/pangloss/vim-javascript.git
+    ignore = dirty
+[submodule "bundle/repeat"]
+    path = bundle/repeat
+    url = https://tpope.io/vim/repeat.git
+    ignore = dirty
+[submodule "bundle/vim-grammarous"]
+    path = bundle/vim-grammarous
+    url = https://github.com/rhysd/vim-grammarous
+    ignore = dirty
+[submodule "bundle/clang_complete"]
+    path = bundle/clang_complete
+    url = https://github.com/Rip-Rip/clang_complete
+    ignore = dirty
+[submodule "bundle/YouCompleteMe"]
+    path = bundle/YouCompleteMe
+    url = https://github.com/Valloric/YouCompleteMe
+    ignore = dirty

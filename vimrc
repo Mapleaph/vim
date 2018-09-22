@@ -68,6 +68,8 @@ let g:ctrlp_follow_symlinks=1
 " remap leader from \ to ;
 "let mapleader=";"
 
+nnoremap <leader>h :helpgrep<space>
+
 " select a jump in the jump list
 function! GotoJump()
   jumps
@@ -154,7 +156,9 @@ set selection=exclusive
 
 " disable annoying error message when using YCM
 " Value Error: Still no compile flags, no completion yet.
-let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_key_invoke_completion = '<C-a>'
+let g:ycm_seed_identifiers_with_syntax = 1
 
 " 可视模式下 Ctrl+c 复制
 vmap <C-c> "*y
@@ -255,7 +259,7 @@ set history=1000
 "新建.c,.h,.sh,.java文件，自动插入文件头
 autocmd BufNewFile *.cpp,*.[ch],*.sh,*.java exec ":call SetTitle()"
 ""定义函数SetTitle，自动插入文件头
-func SetTitle()
+function! SetTitle()
 	"如果文件类型为.sh文件
 	if &filetype == 'sh'
 		call setline(1,"\#########################################################################")
@@ -286,7 +290,7 @@ func SetTitle()
 	endif
 	"新建文件后，自动定位到文件末尾
 	autocmd BufNewFile * normal G
-endfunc
+endfunction
 
 " NerdTree
 " 打开/关闭 NERDTree 快捷键
@@ -336,3 +340,59 @@ nnoremap <C-H> <C-W><C-H>
 
 command! Hex %!xxd
 command! Hexq %!xxd -r
+
+" start marked2.app to preview markdown file
+" use :call TrimWhitespace()
+function! Marked2()
+    !open % -a "Marked 2"
+endfunction
+
+" matchit
+packadd! matchit
+
+" move current line up/down by line(s)
+nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr>
+nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
+
+" insert empty line(s)
+nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
+nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
+
+" change cursor shape in different modes
+if empty($TMUX)
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+else
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+endif
+
+" prevent lose selection when using < >
+xnoremap <  <gv
+xnoremap >  >gv
+
+" highlight current line only in the current window
+" and disable highlight when in insert mode.
+autocmd InsertLeave,WinEnter * set cursorline
+autocmd InsertEnter,WinLeave * set nocursorline
+
+" make auto-complete even faster
+set complete-=i   " disable scanning included files
+set complete-=t   " disable searching tags
+
+" enable complete
+set omnifunc=syntaxcomplete#Complete
+
+" cscope keybindings
+" currently conflict with nerdcommenter
+"nnoremap <buffer> <leader>cs :cscope find s  <c-r>=expand('<cword>')<cr><cr>
+"nnoremap <buffer> <leader>cg :cscope find g  <c-r>=expand('<cword>')<cr><cr>
+"nnoremap <buffer> <leader>cc :cscope find c  <c-r>=expand('<cword>')<cr><cr>
+"nnoremap <buffer> <leader>ct :cscope find t  <c-r>=expand('<cword>')<cr><cr>
+"nnoremap <buffer> <leader>ce :cscope find e  <c-r>=expand('<cword>')<cr><cr>
+"nnoremap <buffer> <leader>cf :cscope find f  <c-r>=expand('<cfile>')<cr><cr>
+"nnoremap <buffer> <leader>ci :cscope find i ^<c-r>=expand('<cfile>')<cr>$<cr>
+"nnoremap <buffer> <leader>cd :cscope find d  <c-r>=expand('<cword>')<cr><cr>
+
