@@ -159,6 +159,7 @@ set selection=exclusive
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 let g:ycm_key_invoke_completion = '<C-a>'
 let g:ycm_seed_identifiers_with_syntax = 1
+let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/'
 
 " 可视模式下 Ctrl+c 复制
 vmap <C-c> "*y
@@ -234,12 +235,6 @@ set report=0
 
 " 显示行号
 set number
-
-" 从不备份
-set nobackup
-
-" 保留撤销历史
-set undofile
 
 " 自动切换工作目录
 set autochdir
@@ -396,3 +391,29 @@ set omnifunc=syntaxcomplete#Complete
 "nnoremap <buffer> <leader>ci :cscope find i ^<c-r>=expand('<cfile>')<cr>$<cr>
 "nnoremap <buffer> <leader>cd :cscope find d  <c-r>=expand('<cword>')<cr><cr>
 
+" 如果文件夹不存在，则新建文件夹
+if !isdirectory($HOME.'/.vim/files') && exists('*mkdir')
+  call mkdir($HOME.'/.vim/files')
+  call mkdir($HOME.'/.vim/files/backup')
+  call mkdir($HOME.'/.vim/files/swap')
+  call mkdir($HOME.'/.vim/files/undo')
+  call mkdir($HOME.'/.vim/files/info')
+endif
+
+" 备份文件
+set backup
+set backupdir   =$HOME/.vim/files/backup/
+set backupext   =-vimbackup
+set backupskip  =
+" 交换文件
+set directory   =$HOME/.vim/files/swap/
+set updatecount =100
+" 撤销文件
+set undofile
+set undodir     =$HOME/.vim/files/undo/
+" viminfo 文件
+set viminfo     ='100,n$HOME/.vim/files/info/viminfo
+
+" file encoding
+let &termencoding=&encoding
+set fileencodings=utf-8,gbk
