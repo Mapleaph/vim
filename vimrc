@@ -1,6 +1,8 @@
 " enable pathogen plugin
 execute pathogen#infect()
 
+set encoding=utf-8
+
 if (has("gui_running"))
         "set guifont=Source\ Code\ Pro:h11
         set guifont=Monaco:h13
