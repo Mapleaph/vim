@@ -14,10 +14,6 @@
     path = bundle/taglist
     url = https://github.com/vim-scripts/taglist.vim
     ignore = dirty
-[submodule "bundle/vimcdoc"]
-    path = bundle/vimcdoc
-    url = git://github.com/yianwillis/vimcdoc.git
-    ignore = dirty
 [submodule "bundle/nerdtree-git-plugin"]
     path = bundle/nerdtree-git-plugin
     url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
@@ -58,11 +54,11 @@
     path = bundle/vim-numbertoggle
     url = https://github.com/jeffkreeftmeijer/vim-numbertoggle
     ignore = dirty
-[submodule "/Users/wukai/.vim/bundle/vim-rhubarb"]
+[submodule "bundle/vim-rhubarb"]
     path = bundle/vim-rhubarb
     url = https://github.com/tpope/vim-rhubarb
     ignore = dirty
-[submodule "/Users/wukai/.vim/bundle/fugitive-gitlab"]
+[submodule "bundle/fugitive-gitlab"]
     path = bundle/fugitive-gitlab
     url = https://github.com/shumphrey/fugitive-gitlab.vim
     ignore = dirty
@@ -70,7 +66,7 @@
     path = bundle/vim-airline
     url = https://github.com/vim-airline/vim-airline
     ignore = dirty
-[submodule "/Users/wukai/.vim/bundle/vim-airline-themes"]
+[submodule "bundle/vim-airline-themes"]
     path = bundle/vim-airline-themes
     url = https://github.com/vim-airline/vim-airline-themes
     ignore = dirty
@@ -111,8 +107,9 @@
     url = https://github.com/Valloric/YouCompleteMe
     ignore = dirty
 [submodule "bundle/FastFold"]
-	path = bundle/FastFold
-	url = https://github.com/Konfekt/FastFold
+    path = bundle/FastFold
+    url = https://github.com/Konfekt/FastFold
 [submodule "bundle/undotree"]
-	path = bundle/undotree
-	url = https://github.com/mbbill/undotree
+    path = bundle/undotree
+    url = https://github.com/mbbill/undotree
+
