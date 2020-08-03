@@ -117,3 +117,6 @@
     path = bundle/undotree
     url = https://github.com/mbbill/undotree
 
+[submodule "bundle/vim-beancount"]
+	path = bundle/vim-beancount
+	url = https://github.com/nathangrigg/vim-beancount
