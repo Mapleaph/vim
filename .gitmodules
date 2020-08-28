@@ -120,3 +120,9 @@
 [submodule "bundle/vim-beancount"]
 	path = bundle/vim-beancount
 	url = https://github.com/nathangrigg/vim-beancount
+[submodule "bundle/vim-gutentags"]
+	path = bundle/vim-gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags.git
+[submodule "bundle/LeaderF"]
+	path = bundle/LeaderF
+	url = https://github.com/Yggdroot/LeaderF
