@@ -345,7 +345,7 @@ let NERDTreeIgnore=['\.pyc','\~$','\.swp', '\.DS_Store']
 let NERDTreeShowBookmarks=1
 
 " 显示 git 信息
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",

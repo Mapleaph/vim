@@ -126,3 +126,9 @@
 [submodule "bundle/LeaderF"]
 	path = bundle/LeaderF
 	url = https://github.com/Yggdroot/LeaderF
+[submodule "bundle/syntax"]
+	path = bundle/syntax
+	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
+[submodule "bundle/vim-signify"]
+	path = bundle/vim-signify
+	url = https://github.com/mhinz/vim-signify
